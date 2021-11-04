@@ -38,7 +38,10 @@ export const store = new Vuex.Store({
 
                 commit('SET_LOADING', true)
 
-                const { data } = await axios.get(`${payload.api}${payload.params || ''}`)
+                const { data } = await axios.get(`${payload.api}${payload.params || ''}`,{ headers: {
+                        'content-type' : 'application/json',
+                        'accept':'application/json'
+                    }})
 
                 const newPayload = {...payload, data}
 
