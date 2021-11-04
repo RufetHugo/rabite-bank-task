@@ -134,7 +134,7 @@ export default {
         async sendData() {
             if(!this.invalid){
                 const id = this.$route.params.id
-                const res = await axios[id ? 'put' : 'post']('products', this.data)
+                const res = await axios[id ? 'put' : 'post'](`products${id ? '/' + id : ''}`, this.data)
                 this.$globalAlert(res.status)
             }
         },
