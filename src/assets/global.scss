@@ -1,0 +1,24 @@
+.contain{
+    object-fit: contain !important;
+}
+.cover{
+    object-fit: cover !important;
+}
+
+.b-sidebar{
+    width: 400px !important;
+    max-width: 100%;
+}
+
+.z-index{
+    &-1{
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1300px;
+    }
+}
+
